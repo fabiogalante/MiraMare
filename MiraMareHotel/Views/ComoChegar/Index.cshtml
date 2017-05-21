@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Como chegar";
+    Layout = "~/Views/Shared/_MiraMare.cshtml";
+}
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPqFCHJNzVBe3naE5LgHHeK68hWkzK2Is&sensor=false"></script>
+<script type="text/javascript" src="http://www.map-generator.org/map/iframejs/72345fae-cd87-4294-9566-b86def45bfa7?key=AIzaSyCPqFCHJNzVBe3naE5LgHHeK68hWkzK2Is&width=800px&height=600px"></script>
+
+
+
+
+<div class="container">
+    <div class="section_header">
+        <h3><img src="@Url.Content("~/images/br.png")" />Como chegar </h3>
+    </div>
+</div>
+
+
+<div class="container">
+    <p class="texto">
+        <img src="@Url.Content("~/images/br.png")" />
+        O MIRA-MARÉ PRAIA HOTEL localiza-se no nº4479 da Avenida Miguel Estéfano, costeira à Praia da Enseada, 
+        no Guarujá. Dista uma hora de viagem de São Paulo, pela Via dos Imigrantes ou Via Anchieta, com acesso direto através da Via Piaçaguera, ou pelo serviço de balsa Santos-Guarujá ou Guarujá-Bertioga. CEP: 11440-534
+    </p>
+</div>
+
+
+<div class="container">
+    <div id="mapid-72345fae-cd87-4294-9566-b86def45bfa7"></div>
+</div>
+
+
+
+
+
+
+
+
+
+

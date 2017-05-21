@@ -1,0 +1,31 @@
+﻿@model MiraMareHotel.Models.TarifaPacotePeriodo
+@{Layout = null;}
+
+<script src="~/js/jquery.maskedinput.js"></script>
+<script src="~/js/admin.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.Id)
+    <span>De:</span>
+    @Html.EditorFor(model => model.De)
+    <span>Ate:</span>
+    @Html.EditorFor(model => model.Ate)
+     <span>Feríado:</span>
+    @Html.EditorFor(model => model.Nome)
+    
+    <a href="#" id="salvar">
+                <span title="Salvar"><i class="icon-ok"></i></span>
+            </a>
+    
+    <a href="#" id="cancelar">
+                <span title="Cancelar"><i class="icon-remove"></i></span>
+            </a>
+    
+}
+
+
+
+

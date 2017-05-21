@@ -1,0 +1,314 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!-- Slider -->
+
+<section id="feature_slider" class="">
+
+
+    <!--
+        Each slide is composed by <img> and .info
+        - .info's position is customized with css in index.css
+        - each <img> parallax effect is declared by the following params inside its class:
+
+        example: class="asset left-472 sp600 t120 z3"
+        left-472 means left: -472px from the center
+        sp600 is speed transition
+        t120 is top to 120px
+        z3 is z-index to 3
+        Note: Maintain this order of params
+
+        For the backgrounds, you can combine from the bgs folder :D
+        -->
+
+
+
+
+
+
+    <article class="slide" id="showcasing" style="background: url('img/backgrounds/indigo_thumb.jpg') repeat-x top center;">
+        <img class="asset left-30 sp600 t80 z1 img_box" src="Carousel/logo.gif" />
+        <div class="info">
+            <h2>Mira-Maré Praia Hotel</h2>
+        </div>
+    </article>
+
+    <article class="slide" id="showcasing" style="background: url('img/backgrounds/aqua_thumb.jpg') repeat-x top center;">
+
+
+        <img class="asset left-572 sp600 t80 z3" src="Carousel/hotel.jpg" />
+        <img class="asset left-40 sp500 t80 z2" src="Carousel/hotel2.jpg" />
+
+
+        <div class="info">
+
+        </div>
+
+    </article>
+
+    <article class="slide" id="ideas" style="background: url('img/backgrounds/mango_thumb.jpg') repeat-x top center; ">
+        <img class="asset left-630 sp600 t80 z1" src="Carousel/cafe.jpg" />
+        <div class="info">
+
+        </div>
+    </article>
+
+
+    <article class="slide" id="showcasing" style="background: url('img/backgrounds/color_splash_thumb.jpg') repeat-x top center;">
+        <img class="asset left-30 sp600 t80 z1" src="Carousel/mar.jpg" />
+        <div class="info">
+            <h2>Mira-Maré Praia Hotel  Enseada Guarujá</h2>
+        </div>
+    </article>
+
+    <article class="slide" id="ideas" style="background: url('img/backgrounds/aqua.jpg') repeat-x top center; ">
+        <img class="asset left-630 sp600 t80 z1" src="img/praia.jpg" /><div class="info"></div>
+    </article>
+
+
+    <article class="slide" id="tour" style="background: url('img/backgrounds/deep_green_thumb.jpg') repeat-x top center;">
+        <img class="asset left-472 sp650 t80 z3" src="Carousel/cima.jpg" />
+        <div class="info">
+
+        </div>
+    </article>
+
+
+
+    <article class="slide" id="showcasing" style="background: url('img/backgrounds/landscape.png') repeat-x top center;">
+        <img class="asset left-30 sp600 t120 z1" src="img/4.jpg" />
+        <div class="info">
+            <h2>Calçadão - Praia da Enseada</h2>
+        </div>
+    </article>
+
+
+    <article class="slide" id="responsive" style="background: url('img/backgrounds/indigo.jpg') repeat-x top center;">
+        <img class="asset left-572 sp600 t120 z3" src="img/6.jpg" />
+        <img class="asset left-40 sp500 t120 z2" src="img/7.jpg" />
+        <div class="info">
+            <h2></h2>
+        </div>
+    </article>
+
+
+    <article class="slide" id="ideas" style="background: url('img/backgrounds/indigo.jpg') repeat-x top center;">
+        <div class="info">
+            <h2>Mira-Maré Praia Hotel</h2>
+        </div>
+        <img class="asset left-680 sp600 t260 z1" src="img/1.jpg" />
+        <img class="asset left-210 sp600 t213 z2" src="img/2.jpg" />
+        <img class="asset left260 sp600 t260 z1" src="img/3.jpg" />
+    </article>
+</section>
+
+
+<div id="showcase">
+    <div class="container">
+        <div class="section_header">
+            <h3>Mira-Maré Praia Hotel</h3>
+        </div>
+
+
+        <div class="texto">
+            <img src="images/br.png" style="margin-right: 15px" />  Seja bem-vindo ao MIRA-MARÉ PRAIA HOTEL, cujo serviço destaca-se pela cortesia, limpeza, conforto e segurança, com acomodações modernas, de frente para o mar, no trecho mais tranquilo da Praia da Enseada, no Guarujá. Capacidade: 25 apartamentos.
+        </div>
+
+        <div class="texto">
+            <img src="images/um.png" style="margin-right: 15px">  Welcome to MIRA-MARÉ PRAIA HOTEL, where courtesy, cleanliness, comfort and safety/security, stand out, together with modern facilities, overlooking the sea, in the calmest part of the Enseada Beach, in Guarujá
+
+            Capacity: 25 apartments/flats
+
+        </div>
+
+        <div class="texto">
+            <img src="images/it.png" style="margin-right: 15px">   Benvenuti  al MIRA-MARÉ PRAIA HOTEL,  di fronte al mare, nel punto più tranquillo della spiaggia ENSEADA, nel GUARUJÁ, con ambienti moderni, puliti, confortevoli, sicuri e servízi che primano per la cortesia.
+        </div>
+
+        <div class="row feature_wrapper">
+            <!-- Features Row -->
+            <div class="features_op1_row">
+                <!-- Feature -->
+                <div class="span4 feature first">
+                    <div class="img_box">
+                        <a href="~/Acomodacoes/Index">
+                            <img src="~/img/aptriplo.jpg" />
+                            <span class="circle">
+                                <span class="plus">&#43;</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="text">
+
+                        <h6>Acomodações</h6>
+                        <p>
+                            <img src="images/br.png" style="margin-right: 15px" />
+                            Apartamentos amplos, para até 4 hóspedes, com televisão, ar-condicionado spleet, ventilador de teto,
+                            frigobar, interfone, cofre, Internet Wireless. Oito apartamentos têm ampla varanda de frente para o mar.
+                            Os demais apartamentos são de frente para o mar ou para o jardim do hotel.
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature -->
+                <div class="span4 feature">
+                    <div class="img_box">
+                        <a href="../Servicos">
+                            <img src="~/img/servicoshotel.JPG" />
+                            <span class="circle">
+                                <span class="plus">&#43;</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="text">
+
+                        <h6>Serviços no hotel</h6>
+                        <p>
+                            <img src="images/br.png" style="margin-right: 15px" />
+                            Farto café da manhã incluido na diária. Piscina de frente para o mar. Guarda-sóis, toalhas e cadeiras de praia. Salão de jogos junto à  recepção do hotel. Internet Wireless. Estacionamento interno fechado, com serviço de manobrista 24 horas. Para os bebês: berço no apartamento dos pais e apoio ao preparo  de mamadeiras, com acesso à cozinha do hotel.
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature -->
+                <div class="span4 feature last">
+                    <div class="img_box">
+                        <a href="services.html">
+                            <img src="~/img/proximidadeshotel.jpg" />
+                            <span class="circle">
+                                <span class="plus">&#43;</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="text">
+
+                        <h6>Proximidades</h6>
+                        <p>
+                            <img src="images/br.png" style="margin-right: 15px" />
+
+                            O MIRA-MARÉ PRAIA HOTEL dista poucas quadras dos melhores restaurantes do Guarujá, de um centro de esportes náuticos, de um centro comercial e da estrada de acesso à Praia de Pernambuco e demais praias do litoral norte.
+
+
+                        </p>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+
+
+
+        <div class="row feature_wrapper">
+            <!-- Features Row -->
+            <div class="features_op1_row">
+                <!-- Feature -->
+                <div class="span4 feature first">
+                    <div class="text">
+                        <h6>Facilities</h6>
+                        <p>
+                            <img src="images/um.png" style="margin-right: 15px">
+                            Spacious bedrooms, to until 4 guests, provided with TV set, air-conditioning, ceiling fan, refrigerator, interphone and safe. Eight of our bedrooms have big balconies, overlooking the sea. The other bedrooms overlook the sea or our garden
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature -->
+                <div class="span4 feature">
+                    <div class="text">
+                        <h6>Hotel Services</h6>
+
+                        <p>
+                            <img src="images/um.png" style="margin-right: 15px">
+                            Generous breakfast, whose price is included in the bill.
+                            Sunshade and appropriate chair to the beach.
+                            Living room with TV set.
+                            Closed park, with valet parking 24 hours a day.
+
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Feature -->
+                <div class="span4 feature last">
+                    <div class="text">
+                        <h6>Surroundig Services</h6>
+
+                        <p>
+                            <img src="images/um.png" style="margin-right: 15px">
+
+                            The Mira-Maré Hotel is a few bloks from the best restaurants, a sailing sports centre, a shopping centre and it’s also close to the highway to Pernambuco Beach and other beaches in the North Coastline (Litoral Norte)
+
+                        </p>
+
+                    </div>
+                 
+                </div>
+            </div>
+        </div>        
+        
+        
+        
+        
+
+        <div class="row feature_wrapper">
+            <!-- Features Row -->
+            <div class="features_op1_row">
+                <!-- Feature -->
+                <div class="span4 feature first">
+                    <div class="text">
+                        <h6>Comodità</h6>
+
+                        <p>
+                            <img src="images/it.png" style="margin-right: 15px">
+                            Camere ampie, con  bagno, per accomodare fino 4 ospiti, con televisore, aria condizionata, ventilatore a soffitto, frigo-bar, box doccia, telefono interno, Internet Wireless.
+                            Otto camere hanno un’ampio balcone che si apre sul mare. Dalle altre camere anche si guarda il mare od un giardino tropicale.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- Feature -->
+                <div class="span4 feature">
+                    <div class="text">
+                        <h6>Servízi prestati dall´hotel</h6>
+
+                        <p>
+                            <img src="images/it.png" style="margin-right: 15px">
+                            Inclusa nella tariffa: abbondante colazione, piscina, sala  per TV e giochi, parcheggio interno con servízio di autista 24 ore, ombrelloni, asciugamani e sedie da spiaggia, Internet Wireless.
+                        </p>
+                    </div> 
+
+                </div>
+                <!-- Feature -->
+                <div class="span4 feature last">
+                    <div class="text">
+                        <h6>DINTORNI</h6>
+
+                        <p>
+                            <img src="images/it.png" style="margin-right: 15px">
+                            Il Mira-Maré Praia Hotel dista poche quadre dai migliori ristoranti del Guarujá, da un centro di sport nàutici, da un centro commerciale e dalla via di acesso alla spiaggia “Pernambuco” ed altre spiaggie della “Costa Verde”, un confine tra monti coperti da foreste tropicali ed il mare.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>   
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+

@@ -1,0 +1,189 @@
+﻿@model MiraMareHotel.Models.TarifaBalcao
+
+@{
+    ViewBag.Title = "Balcao";
+    Layout = "~/Views/Shared/_MiraMare.cshtml";
+}
+
+<link rel="stylesheet" href="@Url.Content("~/css/pricing.css")" type="text/css" media="screen" />
+
+
+<div id="in_pricing2">
+    <div class="container">
+
+
+        <div class="section_header">
+            <h3><img src="@Url.Content("~/images/br.png")" />Tarifa balcão <span>(exceto para pacotes em feriados) </span></h3>
+        </div>
+
+        <h3>De domingo a 5ª feira</h3>
+        <div class="row charts_wrapp">
+            <!-- Luxo -->
+            <div class="span6 ultra">
+                <div class="plan">
+                    <div class="wrapper">
+                        <h3>Luxo</h3>
+                        <div class="price">
+                            <span class="qty">1 hospede - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo1Hospede)</span>
+                        </div>
+                        <div class="price">
+                            <span>2 hospedes - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo2Hospedes)</span>
+                        </div>
+                        <div class="price">
+                            <span>3 hospedes - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo3Hospedes)</span>
+                        </div>
+                        <div class="price">
+                            <span>4 hospedes - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo4Hospedes)</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxo com varanda -->
+            <div class="span6 ultra">
+                <div class="plan">
+                    <div class="wrapper">
+                        <h3>Luxo com varanda</h3>
+                        <div class="price">
+                            <span class="qty">1 hospede - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.LuxoVaranda1Hospede)</span>
+                        </div>
+                        <div class="price">
+                            <span>2 hospedes - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.LuxoVaranda2Hospedes)</span>
+                        </div>
+                        <div class="price">
+                            <span>3 hospedes - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.LuxoVaranda3Hospedes)</span>
+                        </div>
+                        <div class="price">
+                            <span></span>
+                            <span class="dollar"></span>
+                            <span class="qty"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <h3>6ª feira e sábado</h3>
+        <div class="row charts_wrapp">
+            <!-- Luxo -->
+            <div class="span6 ultra">
+                <div class="plan">
+                    <div class="wrapper">
+                        <h3>Luxo</h3>
+                        <div class="price">
+                            <span class="qty">1 hospede - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo1HospedeFds)</span>
+                        </div>
+                        <div class="price">
+                            <span>2 hospedes</span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo2HospedesFds)</span>
+                        </div>
+                        <div class="price">
+                            <span>3 hospedes</span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo3HospedesFds)</span>
+                        </div>
+                        <div class="price">
+                            <span>4 hospedes</span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.Luxo4HospedesFds)</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxo com varanda -->
+            <div class="span6 ultra">
+                <div class="plan">
+                    <div class="wrapper">
+                        <h3>Luxo com varanda</h3>
+                        <div class="price">
+                            <span class="qty">1 hospede - </span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.LuxoVaranda1HospedeFds)</span>
+                        </div>
+                        <div class="price">
+                            <span>2 hospedes</span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.LuxoVaranda2HospedesFds)</span>
+                        </div>
+                        <div class="price">
+                            <span>3 hospedes</span>
+                            <span class="dollar">R$</span>
+                            <span class="qty">@Html.DisplayFor(model => model.LuxoVaranda3HospedesFds)</span>
+                        </div>
+                        <div class="price">
+                            <span></span>
+                            <span class="dollar"></span>
+                            <span class="qty"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="container">
+
+    <img src="@Url.Content("~/images/br.png")" />
+
+    <p class="texto">
+        Descontos especiais para períodos prolongados de estadia, quando não incluirem datas comemorativas do calendário regional e nacional. Entrar em contato com o hotel para negociar o valor.
+    </p>
+    <p class="texto">
+        Tarifa não comissionável.
+    </p>
+    <p class="texto">
+        Não é cobrada taxa de serviço.
+    </p>
+    <p class="texto">
+        Incluso em todas as diárias: café da manhã,serviço de praia (guarda sol, toalhae cadeira de praia  entregues ao hóspede no hotel), uso de piscina de frente para o mar e de estacionamento fechado, interno ao hotel, com manobrista 24 horas.
+    </p>
+    <p class="texto">
+        Diária completa: Check-in às 13 horas, check-outàs 12 horas, independente do horário de entrada no hotel. Saídas entre 12 horas e 18 horas com acréscimo de meia diária.Saídas após as 18 horas com acréscimo igual ao valor de uma diária. Com disponibilidade de apartamentos no hotel,há possibilidade de late check-out até as 15 horas.
+    </p>
+    <p class="texto">
+        Cortesias: no caso de bebês, o hotel oferece berço no apartamento dos paiseapoio para o preparo  de mamadeiras, com acesso à cozinha do hotel; uma criança com até 5 anos, no mesmo apartamento do hóspede acompanhante, não pagadiária; duas crianças com até 5 anos, no mesmo apartamento do hóspede acompanhante, pagam como um adulto.
+    </p>
+    <p class="texto">
+        Cartões de crédito: aceitam-se os cartões de crédito VISA, VISA ELECTRON, CREDICARD-MASTERCARD, REDESHOP e DINERS CLUB.
+    </p>
+    <p class="texto">
+        Não se aceitam cheques.
+    </p>
+    <p class="texto">
+        Pagamento de 50% do valor total das diárias por depósito bancário, com envio de cópia do comprovante ao hotel, como única forma de garantia da reserva. O restante do pagamento das diárias será feito no check-in. O não comparecimento na data prevista para o check-in será considerado no show e a reserva será cobrada integralmente. O check out antecipado não dará direito à devolução ou redução de valores.
+    </p>
+    <p class="texto">
+        O valor pago pelo cliente será devolvido integralmente em cancelamento de reservas realizado até 15 dias antes do check-in. Em cancelamentos realizados a menos de 15 dias do check-in,será devolvido apenas 50% do valor pago para as reservas.Para as reservas de pacotes de Reveillon,Fundação de São Paulo, Carnaval, Semana Santa, Tiradentes, Dia do Trabalho, Corpus Christi,  Independência do Brasil, Nossa Senhora Aparecida,  Finados, Proclamação da República, Natal e demais comemorações do calendário regional e nacional, haverá perda total do valor pago em cancelamentos realizados a menos de 15 dias do check-in.
+    </p>
+</div>
+

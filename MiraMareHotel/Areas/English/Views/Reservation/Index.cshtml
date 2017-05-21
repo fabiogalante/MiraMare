@@ -1,0 +1,94 @@
+﻿@model MiraMareHotel.Models.Reserva
+
+@{
+    ViewBag.Title = "Reservation";
+    Layout = "~/Areas/English/Views/Shared/_MiraMareEnglish.cshtml";
+}
+
+
+<link rel="stylesheet" href="@Url.Content("~/css/contact.css")" type="text/css" media="screen" />
+
+
+<div id="contact">
+    <div class="container">
+        <div class="section_header">
+            <h3><img src="@Url.Content("~/images/en.png")" />Reservation </h3>
+        </div>
+
+        <div class="row contact">
+
+            
+            <p class="texto">
+                <img src="@Url.Content("~/images/en.png")" />  
+                Guarantee the reservation by sending by fax or internet the bank receipt in favor of the hotel´s bank acount. The hotel will contact you as soon as the message is received. 
+            </p>
+
+
+            <div id="mensagemReserva"></div>
+
+            
+
+            @using (Ajax.BeginForm("Index", "Reservation", new AjaxOptions
+                {
+                    HttpMethod = "POST",
+                    OnComplete = "OnComplete"
+
+                }))
+            {
+
+                @Html.AntiForgeryToken()
+
+
+                <div class="row form">
+
+                    <div class="span6 box">
+                        @Html.TextBoxFor(model => model.GuestName, new { @class = "", placeholder = "Guest name" })
+                        @Html.TextBoxFor(model => model.EmailEnglish, new { @class = "", placeholder = "E-mail" })
+                        @Html.TextBoxFor(model => model.TelefoneFixo, new { @class = "", placeholder = "Phone" })
+                        @Html.TextBoxFor(model => model.TelefoneCelular, new { @class = "", placeholder = "Mobile" })
+                        @Html.TextBoxFor(model => model.DataEntrada, new { @class = "", placeholder = "Check-in" })
+                        @Html.TextBoxFor(model => model.HorarioPrevisto, new { @class = "", placeholder = "Scheduled time" })
+                        @Html.TextBoxFor(model => model.Apartamento, new { @class = "", placeholder = "Number of rooms" })
+                        @Html.TextBoxFor(model => model.DataSaida, new { @class = "", placeholder = "Check-out" })
+                        @Html.DropDownListFor(model => model.DiariaValue, (SelectList)ViewBag.Diaria)
+
+                    </div>
+
+                    <div class="span6 box">
+                        @Html.TextBoxFor(model => model.Cep, new { @class = "", placeholder = "ZIP" })
+                        @Html.TextBoxFor(model => model.Endereco, new { @class = "", placeholder = "Guest address" })
+                        @Html.TextBoxFor(model => model.Numero, new { @class = "", placeholder = "Number" })
+                        @Html.TextBoxFor(model => model.Complemento, new { @class = "", placeholder = "Complement" })
+                        @Html.TextBoxFor(model => model.Bairro, new { @class = "", placeholder = "District" })
+                        @Html.TextBoxFor(model => model.Cidade, new { @class = "", placeholder = "City" })
+                        @Html.TextBoxFor(model => model.Estado, new { @class = "", placeholder = "State" })
+                        @Html.EditorFor(model => model.Comment)
+                        <div id="divMsg"></div>
+
+                        <br />
+                        <input class="reservar" type="submit" value="Submit" id="reservar">
+                        <br />
+                        <div id="divMsg"></div>
+                        <br />
+                        @Html.ValidationMessageFor(model => model.GuestName, String.Empty, new { @class = "help-inline" }) <br />
+                        @Html.ValidationMessageFor(model => model.EmailEnglish, String.Empty, new { @class = "help-inline" })
+
+                    </div>
+
+
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    function OnComplete() {
+        $("#divMsg").append("<h3>Reserva realizada, aguarde nosso contato.</h3>");
+    }
+</script>
+
+

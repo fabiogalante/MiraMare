@@ -1,0 +1,139 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Hotel.master.cs" Inherits="Hotel" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+   
+        <table border="0" cellpadding="0" cellspacing="0" align="center" style="width: 760px; height: 100%" class="tabela">
+            <tr>
+                <td valign="top">
+                    <table id="rotator" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-align: center">
+                            
+                             <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/MiraFotos.xml" Height="158px" Width="760px"  />
+                            
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="Menu">
+                    
+                      <table style="width: 100%" >
+                                    <tr>
+                                    
+                                    
+                                       <td>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Default.aspx" SkinID="menu">HOME</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Acomodacoes.aspx" SkinID="menu">ACOMODAÇÕES</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                        
+                         <td>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ServicosHotel.aspx"
+                                        SkinID="menu">SERVIÇOS NO HOTEL</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                        
+                        <td>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/EspacoEventos.aspx" SkinID="menu">ESPAÇO PARA EVENTOS</asp:HyperLink></li>
+                            </ul>
+                        </td>
+                       
+                        <td>
+                            <ul>
+                            <li>
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Proximidades.aspx" SkinID="menu">PROXIMIDADES</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/ComoChegar.aspx" SkinID="menu">COMO CHEGAR</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Promocoes.aspx" SkinID="menu">PROMOÇÕES</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                         <td>
+                            <ul>
+                                <li>
+                                     <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Reservas.aspx" SkinID="menu">RESERVAS</asp:HyperLink>
+                                </li>
+                            </ul>
+                        </td>
+                                    
+                                    </tr>
+                                </table>
+                    
+                  
+                    </div>
+                    
+                    <asp:ContentPlaceHolder ID="centro" runat="server">
+                    <table style="width: 100%; height: 100%">
+                        <tr>
+                            <td style="width: 500px">
+                            
+                            foto
+                            
+                            </td>
+                            <td style="width: 100%">
+                            
+                            texto
+                            
+                            </td>
+                        </tr>
+                    </table>
+                    </asp:ContentPlaceHolder>
+                    
+                  
+                </td>
+            </tr>
+        </table>
+          
+         
+          
+                   
+                    
+                    <table align="center">
+                        <tr>
+                            <td>
+                             <div class="rodape">
+                             Hotel Mira-Maré - Guaruja - São Paulo - SP <br>
+			     Telefones:	 13-3351-5051(Fixo) / 13-3392-1432(Fax) / 13-98127-0008(Tim) / 13-98127-0009(Tim)
+                             </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    
+    
+    </form>
+</body>
+</html>

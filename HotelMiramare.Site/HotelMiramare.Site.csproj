@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3EFE261-1AC2-4B83-A0ED-801EE13FDE6A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelMiramare.Site</RootNamespace>
+    <AssemblyName>HotelMiramare.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AcomodacoesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MapaController.cs" />
+    <Compile Include="Controllers\ProximidadesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fotos\Acomodacoes\01_ap-duplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\02_ap-duplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\03_ap-duplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\04_ap-duplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\05_ap-duplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\06_ap-triplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\07_ap-triplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\08_ap-triplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\09_ap-quadruplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\10_ap-quadruplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\11_banheiro.jpg" />
+    <Content Include="Fotos\Acomodacoes\12_-entrada-do-ap.jpg" />
+    <Content Include="Fotos\Acomodacoes\13_-armario-e-cofre.jpg" />
+    <Content Include="Fotos\Acomodacoes\14_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\15_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\16_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\17_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\01_ap-duplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\02_ap-duplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\03_ap-duplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\04_ap-duplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\05_ap-duplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\06_ap-triplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\07_ap-triplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\08_ap-triplo-com-varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\09_ap-quadruplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\10_ap-quadruplo.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\11_banheiro.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\12_-entrada-do-ap.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\13_-armario-e-cofre.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\14_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\15_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\16_varanda.jpg" />
+    <Content Include="Fotos\Acomodacoes\Thumb\17_varanda.jpg" />
+    <Content Include="Carousel\cima.JPG" />
+    <Content Include="Carousel\cafe.JPG" />
+    <Content Include="Carousel\hotel.JPG" />
+    <Content Include="Carousel\hotel2.jpg" />
+    <Content Include="Carousel\logo.gif" />
+    <Content Include="Carousel\mar.jpg" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\about.css" />
+    <Content Include="css\backgrounds.css" />
+    <Content Include="css\blog.css" />
+    <Content Include="css\blogpost.css" />
+    <Content Include="css\bootstrap-overrides.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\coming-soon.css" />
+    <Content Include="css\contact.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\elastislide.css" />
+    <Content Include="css\features.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\lib\animate.css" />
+    <Content Include="css\lib\flexslider.css" />
+    <Content Include="css\lib\isotope.css" />
+    <Content Include="css\portfolio-item.css" />
+    <Content Include="css\portfolio.css" />
+    <Content Include="css\pricing.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\services.css" />
+    <Content Include="css\sign-in.css" />
+    <Content Include="css\sign-up.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Fotos\EspacoEventos\0025.JPG" />
+    <Content Include="Fotos\EspacoEventos\0031.JPG" />
+    <Content Include="Fotos\EspacoEventos\0032.JPG" />
+    <Content Include="Fotos\EspacoEventos\11.jpg" />
+    <Content Include="Fotos\EspacoEventos\13.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem1.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem2.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem3.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem5.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem6.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem7.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem8.jpg" />
+    <Content Include="Fotos\EspacoEventos\Imagem9.jpg" />
+    <Content Include="Fotos\Home\Home.jpg" />
+    <Content Include="Fotos\icon-calendar.gif" />
+    <Content Include="Fotos\Mapa.jpg" />
+    <Content Include="Fotos\MapaAmplo.jpg" />
+    <Content Include="Fotos\Proximidades\1.jpg" />
+    <Content Include="Fotos\Proximidades\10.jpg" />
+    <Content Include="Fotos\Proximidades\11.jpg" />
+    <Content Include="Fotos\Proximidades\12.jpg" />
+    <Content Include="Fotos\Proximidades\123.jpg" />
+    <Content Include="Fotos\Proximidades\13.jpg" />
+    <Content Include="Fotos\Proximidades\14.jpg" />
+    <Content Include="Fotos\Proximidades\15.jpg" />
+    <Content Include="Fotos\Proximidades\16.jpg" />
+    <Content Include="Fotos\Proximidades\17.jpg" />
+    <Content Include="Fotos\Proximidades\18.jpg" />
+    <Content Include="Fotos\Proximidades\19.jpg" />
+    <Content Include="Fotos\Proximidades\2.jpg" />
+    <Content Include="Fotos\Proximidades\3.jpg" />
+    <Content Include="Fotos\Proximidades\4.jpg" />
+    <Content Include="Fotos\Proximidades\5.jpg" />
+    <Content Include="Fotos\Proximidades\6.jpg" />
+    <Content Include="Fotos\Proximidades\7.jpg" />
+    <Content Include="Fotos\Proximidades\8.jpg" />
+    <Content Include="Fotos\Proximidades\9.jpg" />
+    <Content Include="Fotos\Servicos\Imagem1.jpg" />
+    <Content Include="Fotos\Servicos\Imagem2.jpg" />
+    <Content Include="Fotos\Servicos\Imagem3.jpg" />
+    <Content Include="Fotos\Servicos\Imagem4.jpg" />
+    <Content Include="Fotos\Servicos\Imagem5.jpg" />
+    <Content Include="Fotos\Servicos\Imagem6.jpg" />
+    <Content Include="Fotos\Servicos\Imagem7.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\black.png" />
+    <Content Include="images\br.png" />
+    <Content Include="images\it.png" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\nav.png" />
+    <Content Include="images\nav_thumbs.png" />
+    <Content Include="images\pattern.png" />
+    <Content Include="images\um.png" />
+    <Content Include="images\views.png" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="img\4.jpg" />
+    <Content Include="img\6.jpg" />
+    <Content Include="img\7.jpg" />
+    <Content Include="img\about_slide1.jpg" />
+    <Content Include="img\acomodacoes.jpg" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\ale.png" />
+    <Content Include="img\aptriplo.jpg" />
+    <Content Include="img\arvore.jpg" />
+    <Content Include="img\backgrounds\aqua.jpg" />
+    <Content Include="img\backgrounds\aqua_thumb.jpg" />
+    <Content Include="img\backgrounds\baby_blue_thumb.jpg" />
+    <Content Include="img\backgrounds\black_thumb.jpg" />
+    <Content Include="img\backgrounds\color-splash.jpg" />
+    <Content Include="img\backgrounds\color_splash_thumb.jpg" />
+    <Content Include="img\backgrounds\deep_green_thumb.jpg" />
+    <Content Include="img\backgrounds\flower_thumb.jpg" />
+    <Content Include="img\backgrounds\indigo.jpg" />
+    <Content Include="img\backgrounds\indigo_thumb.jpg" />
+    <Content Include="img\backgrounds\landscape.png" />
+    <Content Include="img\backgrounds\mango_thumb.jpg" />
+    <Content Include="img\backgrounds\mint_thumb.jpg" />
+    <Content Include="img\backgrounds\ocean.jpg" />
+    <Content Include="img\backgrounds\ocean_thumb.jpg" />
+    <Content Include="img\backgrounds\silver_thumb.jpg" />
+    <Content Include="img\backgrounds\water_thumb.jpg" />
+    <Content Include="img\badge.png" />
+    <Content Include="img\bg_direction_nav.png" />
+    <Content Include="img\black.png" />
+    <Content Include="img\blog1.png" />
+    <Content Include="img\blog2.png" />
+    <Content Include="img\blog3.png" />
+    <Content Include="img\blog_post.jpg" />
+    <Content Include="img\body_bg.jpg" />
+    <Content Include="img\client1.png" />
+    <Content Include="img\client2.png" />
+    <Content Include="img\client3.png" />
+    <Content Include="img\contact_icos.png" />
+    <Content Include="img\design.png" />
+    <Content Include="img\develop.png" />
+    <Content Include="img\eventos.JPG" />
+    <Content Include="img\face.png" />
+    <Content Include="img\features-ico1.png" />
+    <Content Include="img\features-ico2.png" />
+    <Content Include="img\features-ico3.png" />
+    <Content Include="img\features-ico4.png" />
+    <Content Include="img\features-ico5.png" />
+    <Content Include="img\features-ico6.png" />
+    <Content Include="img\features-ico7.png" />
+    <Content Include="img\folio_item1.png" />
+    <Content Include="img\folio_item2.png" />
+    <Content Include="img\folio_thumb1.png" />
+    <Content Include="img\folio_thumb2.png" />
+    <Content Include="img\formmail.png" />
+    <Content Include="img\formname.png" />
+    <Content Include="img\formphone.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\gplus.png" />
+    <Content Include="img\hotel.jpg" />
+    <Content Include="img\leftright-arrows.png" />
+    <Content Include="img\nav.png" />
+    <Content Include="img\nav_thumbs.png" />
+    <Content Include="img\pattern.png" />
+    <Content Include="img\plan.png" />
+    <Content Include="img\portfolio1.png" />
+    <Content Include="img\portfolio2.png" />
+    <Content Include="img\portfolio3.png" />
+    <Content Include="img\praia.jpg" />
+    <Content Include="img\proximidades.jpg" />
+    <Content Include="img\proximidadeshotel.jpg" />
+    <Content Include="img\recent_photos.jpg" />
+    <Content Include="img\recent_post1.png" />
+    <Content Include="img\recent_post2.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\service1.png" />
+    <Content Include="img\service2.png" />
+    <Content Include="img\service3.png" />
+    <Content Include="img\service_ico1.png" />
+    <Content Include="img\service_ico2.png" />
+    <Content Include="img\service_ico3.png" />
+    <Content Include="img\servicoshotel.jpg" />
+    <Content Include="img\showcase1.png" />
+    <Content Include="img\showcase2.png" />
+    <Content Include="img\showcase3.png" />
+    <Content Include="img\signin_icos.png" />
+    <Content Include="img\slides\scene1\Enseada_Top1.jpg" />
+    <Content Include="img\slides\scene1\macbook.png" />
+    <Content Include="img\slides\scene2\left.png" />
+    <Content Include="img\slides\scene2\middle.png" />
+    <Content Include="img\slides\scene2\right.png" />
+    <Content Include="img\slides\scene3\desktop.png" />
+    <Content Include="img\slides\scene3\ipad.png" />
+    <Content Include="img\slides\scene3\iphone.png" />
+    <Content Include="img\slides\scene3\macbook.png" />
+    <Content Include="img\slides\scene4\css3.png" />
+    <Content Include="img\slides\scene4\html5.png" />
+    <Content Include="img\socialicons.png" />
+    <Content Include="img\socialicons2.png" />
+    <Content Include="img\socialicons_h.png" />
+    <Content Include="img\topo\Enseada_Top1.jpg" />
+    <Content Include="img\topo\Enseada_Top10.jpg" />
+    <Content Include="img\topo\Enseada_Top11.jpg" />
+    <Content Include="img\topo\Enseada_Top12.jpg" />
+    <Content Include="img\topo\Enseada_Top2.jpg" />
+    <Content Include="img\topo\Enseada_Top3.jpg" />
+    <Content Include="img\topo\Enseada_Top4.jpg" />
+    <Content Include="img\topo\Enseada_Top5.jpg" />
+    <Content Include="img\topo\Enseada_Top6.jpg" />
+    <Content Include="img\topo\Enseada_Top7.jpg" />
+    <Content Include="img\topo\Enseada_Top8.jpg" />
+    <Content Include="img\topo\Enseada_Top9.jpg" />
+    <Content Include="img\twt.png" />
+    <Content Include="img\user-display.png" />
+    <Content Include="img\views.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\flexslider.js" />
+    <Content Include="js\gallery.js" />
+    <Content Include="js\index-slider.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.elastislide.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.tmpl.min.js" />
+    <Content Include="js\theme.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Fotos\Acomodacoes\Thumbs.db" />
+    <Content Include="Fotos\Acomodacoes\Thumb\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\Mira.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\galleria-1.3.3.js" />
+    <Content Include="Scripts\galleria-1.3.3.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="themes\classic\classic-demo.html" />
+    <Content Include="themes\classic\classic-loader.gif" />
+    <Content Include="themes\classic\classic-map.png" />
+    <Content Include="themes\classic\galleria.classic.css" />
+    <Content Include="themes\classic\galleria.classic.js" />
+    <Content Include="themes\classic\galleria.classic.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_Clean.cshtml" />
+    <Content Include="Views\Acomodacoes\Index.cshtml" />
+    <Content Include="Views\Shared\_Hotel.cshtml" />
+    <Content Include="Views\Mapa\Index.cshtml" />
+    <Content Include="Views\Proximidades\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50512</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/HotelMiramare.Site</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,197 @@
+﻿body
+{
+    font-family: 'Century Gothic';
+    font-size: 12px;
+    color: #000000;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tabela
+{
+    border-bottom: #000000 1px solid;
+    border-right: #000000 1px solid;
+    border-top: #000000 1px solid;
+    border-left: #000000 1px solid;
+}
+
+.cimabaixo
+{
+     border-bottom: #000000 1px solid;
+     border-top: #000000 1px solid;
+    
+    }
+
+#centro
+{
+    vertical-align: top;
+}
+
+
+
+table.comBorda
+{
+    border-collapse: collapse; /* CSS2 */
+    font-weight: bold;
+    font-family: 'Century Gothic';
+    height: 352px;
+    width: 95%;
+   
+   
+}
+
+table.comBorda td
+{
+    border-right: black 1px solid;
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+    border-bottom: black 1px solid;
+}
+
+table.comBorda tr
+{
+    border: 1px solid #A48D7C;
+}
+
+
+
+
+
+
+
+
+
+
+/* Menu */
+
+.Menu
+{
+    
+    border-bottom: 1px solid;    
+    background-color: #D1DDE9;
+}
+.Menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+		
+}
+.Menu li
+{
+   
+}
+
+.Menu li a  {
+	display: block;	
+	background-color: #D1DDE9;
+	color: #555555;
+	text-decoration: none;	
+	border-left: 12px solid #D1DDE9;	
+	
+}
+.Menu li a:hover {
+	background-color: #aec3d8;		
+	color: #555555;
+	
+}
+
+.rodape
+{
+    border-top: #000000 1px solid;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #D1DDE9;
+    font-family: 'Century Gothic';
+    border-right: #000000 1px solid;
+    border-left: #000000 1px solid;
+    border-bottom: #000000 1px solid;
+    width: 750px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sidebarcontent
+{
+    margin: 1px 10px 1px;
+   
+    top: 0px;
+}
+
+
+#sidebarcontent h3
+{
+    padding: 0.3em 1.5em;
+    margin: 10px 0 0;
+    line-height: 100%;
+    background-color: #aec3d8;
+    color: #000000;
+    font-size: 110%;
+    text-align: center;
+}
+#sidebarcontent .sbcontentcontainer
+{
+    padding: 1em 1.5em 0.5em;
+    border: 1px solid #A48D7C;
+    color: #000000;
+    background-color: #FFFFFF;
+    font-family: 'Century Gothic';
+    font-size: 110%;
+    font-weight: bold;
+    height:306px;
+}
+#sidebarcontent .sbcontentcontainer p {
+	margin: 0 0 1.2em 0;
+	line-height: 1.8em;
+}
+
+#sidebarcontent .sbcontentcontainer ol {padding-left:10px;}
+
+#sidebarcontent .sbcontentcontainer ul {list-style-type:none;}
+
+#fundo
+{
+    background-image: url(fundo.jpg);
+    color: #ffffff;
+    width: 760px;
+    height: 100%;
+}
+
+table.comBordaSimples
+{
+    border-collapse: collapse; /* CSS2 */
+    background: #FFFFF0;
+    background: #000099;
+    color: #ffff00;
+    font-weight: bold;
+    font-family: 'Century Gothic';
+}
+
+table.comBordaSimples td
+{
+    border-right: yellow 1px solid;
+    border-top: yellow 1px solid;
+    border-left: yellow 1px solid;
+    border-bottom: yellow 1px solid;
+}
+
+table.comBordaSimples th
+{
+    border-bottom: #ffff00 2px solid;
+    background: #F0FFF0;
+    border-right: #ffff00 1px solid;
+    border-top: #ffff00 1px solid;
+    border-left: #ffff00 1px solid;
+}

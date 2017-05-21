@@ -1,0 +1,50 @@
+﻿@model MiraMareHotel.Areas.Admin.Models.LogOnModel
+
+@{
+    ViewBag.Title = "Autenticação";
+    Layout = "~/Areas/Admin/Views/Shared/_MiraMare.cshtml";
+}
+
+
+<div id="sign_in2">
+
+    <div class="container">
+        <div class="row login">
+            <div class="span6 signin_box">
+                <div class="box">
+                    <div class="box_cont">
+                        <div class="form">
+
+
+
+                            @using (Html.BeginForm())
+                            {
+                                
+                                 @Html.AntiForgeryToken()
+                                
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "", placeholder = "Usuário" })
+
+                                <br />
+                                @Html.ValidationMessageFor(m => m.UserName, String.Empty, new { @class = "help-inline" })
+
+
+
+                                @Html.PasswordFor(m => m.Password, new { @class = "", placeholder = "Senha" })
+                                <br />
+                                @Html.ValidationMessageFor(m => m.Password, String.Empty, new { @class = "help-inline" }) 
+
+                                <p>
+                                    <input type="submit" value="Acessar" />
+                                </p>
+
+                            }
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

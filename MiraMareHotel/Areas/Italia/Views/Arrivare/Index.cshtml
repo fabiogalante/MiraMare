@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Come arrivare";
+    Layout = "~/Areas/Italia/Views/Shared/_MiraMareItaliano.cshtml";
+}
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPqFCHJNzVBe3naE5LgHHeK68hWkzK2Is&sensor=false"></script>
+<script type="text/javascript" src="http://www.map-generator.org/map/iframejs/72345fae-cd87-4294-9566-b86def45bfa7?key=AIzaSyCPqFCHJNzVBe3naE5LgHHeK68hWkzK2Is&width=800px&height=600px"></script>
+
+
+
+
+<div class="container">
+    <div class="section_header">
+        <h3><img src="@Url.Content("~/images/it.png")" />Come arrivare </h3>
+    </div>
+</div>
+
+
+<div class="container">
+    <p class="texto">
+        <img src="@Url.Content("~/images/it.png")" />
+
+        Il MIRA-MARÉ PRAIA HOTEL si trova nella Avenida Miguel Estefano nº 4479, via costiera alla spiaggia Enseada, nell’isola del Guarujá. Dista un’ora circa da São Paulo, per le autostrade Imigrantes o Anchieta. Per arrivare all’isola del Guarujá si traversa un ponte, nella via Piaçaguera, tra le rive del canale del Porto di Santos, o per traghetto tra Santos e Guarujá, o tra Bertioga e Guarujá. Codico Postale: 11440-534
+
+    </p>
+</div>
+
+
+<div class="container">
+    <div id="mapid-72345fae-cd87-4294-9566-b86def45bfa7"></div>
+</div>
+
+

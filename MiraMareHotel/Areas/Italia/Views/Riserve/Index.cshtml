@@ -1,0 +1,94 @@
+﻿@model MiraMareHotel.Models.Reserva
+
+@{
+    ViewBag.Title = "Riserve";
+    Layout = "~/Areas/Italia/Views/Shared/_MiraMareItaliano.cshtml";
+}
+
+<link rel="stylesheet" href="@Url.Content("~/css/contact.css")" type="text/css" media="screen" />
+
+
+<div id="contact">
+    <div class="container">
+        <div class="section_header">
+            <h3><img src="@Url.Content("~/images/it.png")" />Riserve</h3>
+        </div>
+
+        <div class="row contact">
+
+
+            <p class="texto">
+                <img src="@Url.Content("~/images/it.png")" />
+                
+                Come garanzia della riserva inviare per fax o Internet la comprovazione del deposito bancario nel conto corrente del hotel. Per questa operazione entreremo in contatto appena ricevuto il vostro messaggio.
+
+            </p>
+
+
+            <div id="mensagemReserva"></div>
+
+            <div id="divMsg"></div>
+
+            @using (Ajax.BeginForm("Index", "Riserve", new AjaxOptions
+                {
+                    HttpMethod = "POST",
+                    OnComplete = "OnComplete"
+
+                }))
+            {
+
+                @Html.AntiForgeryToken()
+
+
+                <div class="row form">
+
+                    <div class="span6 box">
+                        @Html.TextBoxFor(model => model.NomeDellOspite, new { @class = "", placeholder = "Nome dell'ospite" })
+                        @Html.TextBoxFor(model => model.EmailItaliano, new { @class = "", placeholder = "E-mail" })
+                        @Html.TextBoxFor(model => model.TelefoneFixo, new { @class = "", placeholder = "Telefono" })
+                        @Html.TextBoxFor(model => model.TelefoneCelular, new { @class = "", placeholder = "Telefono cellulare" })
+                        @Html.TextBoxFor(model => model.DataEntrada, new { @class = "", placeholder = "Data di arrivo" })
+                        @Html.TextBoxFor(model => model.HorarioPrevisto, new { @class = "", placeholder = "Ora prevista" })
+                        @Html.TextBoxFor(model => model.Apartamento, new { @class = "", placeholder = "Quante stanze" })
+                        @Html.TextBoxFor(model => model.DataSaida, new { @class = "", placeholder = "Data di uscita" })
+                        @Html.DropDownListFor(model => model.DiariaValue, (SelectList)ViewBag.Diaria)
+
+                    </div>
+
+                    <div class="span6 box">
+                        @Html.TextBoxFor(model => model.Cep, new { @class = "", placeholder = "Codico Postale" })
+                        @Html.TextBoxFor(model => model.Endereco, new { @class = "", placeholder = "Indirizzo dell'ospite" })
+                        @Html.TextBoxFor(model => model.Numero, new { @class = "", placeholder = "Numero" })
+                        @Html.TextBoxFor(model => model.Complemento, new { @class = "", placeholder = "Complemento" })
+                        @Html.TextBoxFor(model => model.Bairro, new { @class = "", placeholder = "Riòne" })
+                        @Html.TextBoxFor(model => model.Cidade, new { @class = "", placeholder = "Città" })
+                        @Html.TextBoxFor(model => model.Estado, new { @class = "", placeholder = "Comune" })
+                        @Html.EditorFor(model => model.Commento)
+                        <div id="divMsg"></div>
+
+                        <br />
+                        <input class="reservar" type="submit" value="inviare" id="reservar">
+                        <br />
+                        <div id="divMsg"></div>
+                        <br />
+                        @Html.ValidationMessageFor(model => model.NomeDellOspite, String.Empty, new { @class = "help-inline" }) <br />
+                        @Html.ValidationMessageFor(model => model.EmailItaliano, String.Empty, new { @class = "help-inline" })
+
+                    </div>
+
+
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    function OnComplete() {
+        $("#divMsg").append("<h3>Riserva condotto aspettare il nostro contatto</h3>");
+    }
+</script>
+

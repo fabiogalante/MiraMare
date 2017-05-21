@@ -1,0 +1,35 @@
+﻿
+<ul class="nav pull-right">
+    
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Mira-Maré 
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li> @Html.ActionLink("Benvenuti", "Index", "Benvenuti")</li>
+            <li> @Html.ActionLink("Comodità", "Index", "Comodita")</li>
+            <li> @Html.ActionLink("Servízi prestati dall´hotel", "Index", "Servizi")</li>
+            <li> @Html.ActionLink("Sale per riunioni", "Index", "Riunioni")</li>
+            <li> @Html.ActionLink("Giardini e decorazioni", "Index", "Giardini")</li>
+            <li> @Html.ActionLink("Dintorni", "Index", "Dintorni")</li>
+           
+        </ul>
+    </li>
+    <li> @Html.ActionLink("Come arrivare", "Index", "Arrivare")</li>
+    <li> @Html.ActionLink("Riserve", "Index", "Riserve")</li>
+    <li> @Html.ActionLink("Contatto", "Index", "Contatto")</li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Tariffe
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li> @Html.ActionLink("Tariffe per una notte di soggiorno", "Index", "PerUnaNotte")</li>
+            <li> @Html.ActionLink("Tariffe durante giorni festivis", "Index", "GiorniFestivis")</li>
+        </ul>
+    </li>
+    <li> @Html.ActionLink("Galleria", "Index", "Galleria")</li>
+    <li><a href="@Url.Content("~/Home")"><img src="@Url.Content("~/images/br.png")" /></a></li>
+    <li><a href="@Url.Content("~/English/Home")"><img src="@Url.Content("~/images/en.png")" /></a></li>
+</ul>

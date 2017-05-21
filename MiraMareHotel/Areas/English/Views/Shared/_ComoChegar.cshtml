@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>:::.. Hotel Mira-Maré ..::: - @ViewBag.Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link href="@Url.Content("~/css/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/bootstrap-responsive.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/bootstrap-overrides.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/elastislide.css")" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/theme.css")" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/lib/animate.css")" media="screen, projection" />
+
+
+
+    <!-- Scripts -->
+
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/theme.js"></script>
+
+    @*<script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPqFCHJNzVBe3naE5LgHHeK68hWkzK2Is&sensor=true">
+        </script>*@
+    
+    
+    <script type="text/javascript">
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(-34.397, 150.644),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+                mapOptions);
+        }
+    </script>
+
+
+
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+    @*<body onload="initialize()">*@
+
+<body>
+        
+        
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="Home">
+                        <strong>Mira-Maré Praia Hotel</strong>
+                    </a>
+                    <div class="nav-collapse collapse">
+
+                        @Html.Partial("_Menu")
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+        @Html.Partial("_Footer")
+    </body>
+</html>

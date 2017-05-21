@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>:::.. Hotel Mira-Maré ..::: - @ViewBag.Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-overrides.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/theme.css" />
+    <link rel="stylesheet" href="~/css/index.css" type="text/css" media="screen" />
+
+    @*<link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/elastislide.css" />*@
+
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="~/css/lib/animate.css" media="screen, projection" />
+    <!-- Script -->
+  
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/theme.js"></script>
+    <script src="~/js/index-slider.js"></script>
+    
+
+    
+    @*<script src="~/js/jquery-latest.js"></script>
+    <script src="~/Scripts/galleria-1.3.3.min.js"></script>
+
+    <script type="text/javascript" src="~/js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="~/js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="~/js/gallery.js"></script>*@
+
+
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+
+
+
+
+<body>
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="Home">
+                    <strong>Hotel Mira-Maré</strong>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav pull-right">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li> @Html.ActionLink("ACOMODAÇÕES", "Acomodacoes", "Home")</li>
+                        <li> @Html.ActionLink("Proximidades", "Index", "Proximidades")</li>
+                        <li><a href="">Serviços no Hotel</a></li>
+                        <li><a href="">Espaço para eventos</a></li>
+                        <li><a href="">Reservas</a></li>
+                        <li>@Html.ActionLink("Mapa", "Index", "Mapa")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row sections">
+                <div class="span4 recent_posts">
+                    <h3 class="footer_header"></h3>
+
+                </div>
+                <div class="span4 testimonials">
+                    <h3 class="footer_header">
+                        Avaliações
+                    </h3>
+                    <div class="wrapper">
+                        <div class="quote">
+                            <span></span>
+                            Fiquei muito satisfeita com a localização, a limpeza e a cordialidade dos atendestes do hotel, recomendo-o a todos.
+                            <span></span>
+                        </div>
+                        <div class="author">
+
+                            <div class="name">Yasmim</div>
+                            <div class="info">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4 contact">
+                    <h3 class="footer_header">
+                        Contato
+                    </h3>
+                    <form action="#" method="post">
+                        <input type="text" placeholder="Informe seu nome" />
+                        <input type="text" placeholder="Informe seu e-mail" />
+                        <textarea rows="3" placeholder="Mensagem"></textarea>
+                        <input type="submit" value="Enviar" />
+                    </form>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="span12">
+                    <div class="row social">
+                        <div class="span12">
+                            <a href="#" class="facebook">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                            <a href="#" class="twitter">
+                                <span class="socialicons ico2"></span>
+                                <span class="socialicons_h ico2h"></span>
+                            </a>
+                            <a href="#" class="gplus">
+                                <span class="socialicons ico3"></span>
+                                <span class="socialicons_h ico3h"></span>
+                            </a>
+                            <a href="#" class="flickr">
+                                <span class="socialicons ico4"></span>
+                                <span class="socialicons_h ico4h"></span>
+                            </a>
+                            <a href="#" class="pinterest">
+                                <span class="socialicons ico5"></span>
+                                <span class="socialicons_h ico5h"></span>
+                            </a>
+                            <a href="#" class="dribble">
+                                <span class="socialicons ico6"></span>
+                                <span class="socialicons_h ico6h"></span>
+                            </a>
+                            <a href="#" class="behance">
+                                <span class="socialicons ico7"></span>
+                                <span class="socialicons_h ico7h"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="span12">
+
+
+                            Hotel Mira-Maré - Guaruja - São Paulo - SP
+                            Telefones:	 13-3351-5051(Fixo) / 13-3392-1432(Fax) / 13-98127-0008(Tim) / 13-98127-0009(Tim)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

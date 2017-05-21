@@ -1,0 +1,123 @@
+﻿@model IEnumerable<MiraMareHotel.Models.TarifaPacote>
+@{
+    ViewBag.Title = "Tariffe durante giorni festivis";
+    Layout = "~/Areas/Italia/Views/Shared/_MiraMareItaliano.cshtml";
+}
+
+
+
+<link rel="stylesheet" href="@Url.Content("~/css/pricing.css")" type="text/css" media="screen" />
+
+
+<div id="in_pricing2">
+    <div class="container">
+
+        @{ Html.RenderAction("Periodo", "Tarifee"); }
+
+
+
+        @foreach (var item in Model)
+        {
+            <h3> Soggiorno di @Html.DisplayFor(modelItem => item.Dias) notti </h3>
+
+            <div class="row charts_wrapp">
+                <!-- Luxo -->
+                <div class="span6 ultra">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Lusso</h3>
+                            <div class="price">
+                                <span class="qty">1 o 2 ospiti - </span>
+                                <span class="dollar">R$</span>
+                                <span class="qty">@Html.DisplayFor(model => item.Luxo1Hospede)</span>
+                            </div>
+                            <div class="price">
+                                <span class="qty">3 ospiti - </span>
+                                <span class="dollar">R$</span>
+                                <span class="qty">@Html.DisplayFor(model => item.Luxo3Hospedes)</span>
+                            </div>
+                            <div class="price">
+                                <span class="qty">4 ospiti - </span>
+                                <span class="dollar">R$</span>
+                                <span class="qty">@Html.DisplayFor(model => item.Luxo4Hospedes)</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxo com varanda -->
+                <div class="span6 ultra">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Lusso, con ampio balcone</h3>
+                            <div class="price">
+                                <span class="qty">1 o 2 ospiti - </span>
+                                <span class="dollar">R$</span>
+                                <span class="qty">@Html.DisplayFor(model => item.LuxoVaranda1Hospede)</span>
+                            </div>
+                            <div class="price">
+                                <span class="qty">3 ospiti  - </span>
+                                <span class="dollar">R$</span>
+                                <span class="qty">@Html.DisplayFor(model => item.LuxoVaranda3Hospedes)</span>
+                            </div>
+                            <div class="price">
+                                <span class="qty"></span>
+                                <span class="dollar"></span>
+                                <span class="qty"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>
+
+
+<div class="container">
+
+    <img src="@Url.Content("~/images/it.png")" />
+
+    <p class="texto">
+        Sconti speciali per periodi prolungati di soggiorno. Entrare in contatto con l'hotel per accordarne il valore.
+    </p>
+    <p class="texto">
+        Tariffa net, non commissionabile.
+    </p>
+    <p class="texto">
+        Non si tassano i servízi di soggiorno.
+    </p>
+    <p class="texto">
+        Inclusi nella tariffa: La colazione, Il servízio-spiaggia (ombrelloni, asciugamani e sedie),  uso della piscina, del parcheggio  interno all´hotel Ed ell´Internet Wireless.
+    </p>
+    <p class="texto">
+        Periodo di un soggiorno: check-in alle hore 13,  check-out alle hore 12 del giorno dopo, indipendentemente dell’ora di arrive dell’ospite all´hotel. Fuori stagione, Il período di soggiorno può estendersi per qualque ora dopo Il mezzogiorno, quando disponibile la stanza.
+    </p>
+    <p class="texto">
+        In piena stagione, check-out tra le 12 e le 18 ore corrisponde all’accrescita di mezza tariffa. In qualsiasi stagione check-out dopo le ore 18  corrisponde all’accrescita di una nuova tariffa.
+    </p>
+    <p class="texto">
+        Per i neonati l’hotel offre culle nella camera dei genitori e da ccesso alla cucina  per prepare i biberon.
+    </p>
+    <p class="texto">
+        Um bambino com meno di cinque anni, nella  stessa stanza dei genitori, non paga Il soggiorno. Due bambini com meno di cinque anni, nella stessa stanza dei genitori, pagano La tariffa di soggiorno di um ospite adulto.
+    </p>
+    <p class="texto">
+        Non si accettano assegni bancari.
+    </p>
+    <p class="texto">
+        Carte di credito accette: VISA, VISA ELECTRON, CREDICARD-MASTERCARD, REDESHOP e DINERS CLUB.
+    </p>
+    <p class="texto">
+        Per garanzia della riserva inviare 50% del valore totale del soggiorno tramite deposito bancario, com trasmissione di copia all´hotel. Gli altri 50% saranno paghi nel check-in. L´ausenza dell´ospite nella data prevista per Il check-in è considerato no show e sarà riscosso  il valore totale della riserva. Check out antecipato non dà diritto a riduzione di valori.
+    </p>
+    <p class="texto">
+        Il deposito inviato dal cliente è integralmente restituito se Il cancellamento della riserva è informato con 15 o più giorni di anticipo al check-in. Per riserve cancellate a meno di 15 giorni dal check-in si restituisce il 50% del valore depositato. In caso di soggiorni stabiliti per periodi di feste nazionali o regionali, non è restituto il valore  inviato come garanzia della riserva se il cancellamento è informato con meno di 15 giorni dalla data del check-in.
+    </p>
+</div>
+
+

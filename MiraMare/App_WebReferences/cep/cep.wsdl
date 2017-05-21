@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://wsdl.frsp.org/cep/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://wsdl.frsp.org/cep/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://wsdl.frsp.org/cep/">
+      <s:element name="RetornaEndereco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEnderecoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaEnderecoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RetornaEnderecoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaEndereco" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaEnderecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpGetIn">
+    <wsdl:part name="CEP" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpPostIn">
+    <wsdl:part name="CEP" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="CEPSoap">
+    <wsdl:operation name="RetornaEndereco">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Webservice que retorna o endereço do CEP fornecido</wsdl:documentation>
+      <wsdl:input message="tns:RetornaEnderecoSoapIn" />
+      <wsdl:output message="tns:RetornaEnderecoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CEPHttpGet">
+    <wsdl:operation name="RetornaEndereco">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Webservice que retorna o endereço do CEP fornecido</wsdl:documentation>
+      <wsdl:input message="tns:RetornaEnderecoHttpGetIn" />
+      <wsdl:output message="tns:RetornaEnderecoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CEPHttpPost">
+    <wsdl:operation name="RetornaEndereco">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Webservice que retorna o endereço do CEP fornecido</wsdl:documentation>
+      <wsdl:input message="tns:RetornaEnderecoHttpPostIn" />
+      <wsdl:output message="tns:RetornaEnderecoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CEPSoap" type="tns:CEPSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetornaEndereco">
+      <soap:operation soapAction="http://wsdl.frsp.org/cep/RetornaEndereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CEPSoap12" type="tns:CEPSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetornaEndereco">
+      <soap12:operation soapAction="http://wsdl.frsp.org/cep/RetornaEndereco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CEPHttpGet" type="tns:CEPHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="RetornaEndereco">
+      <http:operation location="/RetornaEndereco" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CEPHttpPost" type="tns:CEPHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="RetornaEndereco">
+      <http:operation location="/RetornaEndereco" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CEP">
+    <wsdl:port name="CEPSoap" binding="tns:CEPSoap">
+      <soap:address location="http://wsdl.frsp.org/cep/cep.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CEPSoap12" binding="tns:CEPSoap12">
+      <soap12:address location="http://wsdl.frsp.org/cep/cep.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CEPHttpGet" binding="tns:CEPHttpGet">
+      <http:address location="http://wsdl.frsp.org/cep/cep.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CEPHttpPost" binding="tns:CEPHttpPost">
+      <http:address location="http://wsdl.frsp.org/cep/cep.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,127 @@
+﻿@model MiraMareHotel.Models.TarifaBalcao
+
+@{
+    ViewBag.Title = "Tarifa balcão";
+    Layout = "~/Areas/Admin/Views/Shared/_MiraMare.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Ajax.BeginForm("Index", "Home", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnComplete = "OnComplete"
+
+    }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div id="contact">
+            <div class="container">
+                <div class="section_header">
+                    <h3>Tarifa balcão </h3>
+                </div>
+                <div class="row contact">
+                    <div class="row form">
+                        <div class="span6 box">
+
+
+                            <h2>SEMAMA</h2>
+                            Luxo 1 hóspede
+                            @Html.EditorFor(model => model.Luxo1Hospede)
+
+                            Luxo 2 hóspedes
+                            @Html.EditorFor(model => model.Luxo2Hospedes)
+
+                            Luxo 3 hóspedes
+                            @Html.EditorFor(model => model.Luxo3Hospedes)
+
+                            Luxo 4 hóspedes
+                            @Html.EditorFor(model => model.Luxo4Hospedes)
+
+                            Luxo com varanda 1 hóspede
+                            @Html.EditorFor(model => model.LuxoVaranda1Hospede)
+
+                            Luxo com varanda 2 hóspedes
+                            @Html.EditorFor(model => model.LuxoVaranda2Hospedes)
+
+                            Luxo com varanda 3 hóspedes
+                            @Html.EditorFor(model => model.LuxoVaranda3Hospedes)
+
+                        </div>
+
+
+                        <div class="span6 box">
+
+                            <h2>FIM DE SEMANA</h2>
+
+                            Luxo 1 hóspede
+                            @Html.EditorFor(model => model.Luxo1HospedeFds)
+                            Luxo 2 hóspedes
+                            @Html.EditorFor(model => model.Luxo2HospedesFds)
+                            Luxo 3 hóspedes
+                            @Html.EditorFor(model => model.Luxo3HospedesFds)
+                            Luxo 4 hóspedes
+                            @Html.EditorFor(model => model.Luxo4HospedesFds)
+                            Luxo com varanda 1 hóspede
+                            @Html.EditorFor(model => model.LuxoVaranda1HospedeFds)
+                            Luxo com varanda 2 hóspedes
+                            @Html.EditorFor(model => model.LuxoVaranda2HospedesFds)
+                            Luxo com varanda 3 hóspedes
+                            @Html.EditorFor(model => model.LuxoVaranda3HospedesFds)
+                            <div id="divMsg"></div>
+                        </div>
+                    </div>
+
+                    <div class="row submit">
+                        <div class="span3 right">
+                           
+                            <input type="submit" value="Salvar" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    }
+
+
+</body>
+
+
+
+
+</html>
+
+<script src="~/js/jquery-latest.js"></script>
+<script src="~/js/jquery.validate.js"></script>
+<script src="~/js/jquery.unobtrusive-ajax.js"></script>
+<script src="~/js/jquery.maskedinput.js"></script>
+<script src="~/js/jquery.maskMoney.js"></script>
+<script type="text/javascript">
+    function OnComplete() {
+        $("#divMsg").append("<h3>Preços atualizados com sucesso</h3>");
+    }
+
+
+    $(function () {
+        $('input[type=text]').maskMoney({ prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false });
+    });
+
+</script>
+
+
+

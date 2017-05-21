@@ -1,0 +1,34 @@
+﻿<ul class="nav pull-right">
+    
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Mira-Maré 
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li> @Html.ActionLink("Welcome", "Index", "Hotel")</li>
+            <li> @Html.ActionLink("Facilities", "Index", "Facilities")</li>
+            <li> @Html.ActionLink("Hotel services", "Index", "Services")</li>
+            <li> @Html.ActionLink("Meeting or events room", "Index", "Meeting")</li>
+            <li> @Html.ActionLink("Gardens and decorations", "Index", "Gardens")</li>
+            <li> @Html.ActionLink("Surroundingservices", "Index", "Surroundingservices")</li>
+           
+        </ul>
+    </li>
+    <li> @Html.ActionLink("Arrive", "Index", "Arrive")</li>
+    <li> @Html.ActionLink("Reservation", "Index", "Reservation")</li>
+    <li> @Html.ActionLink("Contact", "Index", "Contact")</li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Price
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li> @Html.ActionLink("Daily price", "DailyPrice", "Price")</li>
+            <li> @Html.ActionLink("Holiday packages", "HolidayPackages", "Price")</li>
+        </ul>
+    </li>
+    <li> @Html.ActionLink("Gallery", "Index", "Gallery")</li>
+    <li><a href="@Url.Content("~/Home")"><img src="@Url.Content("~/images/br.png")" /></a></li>
+    <li><a href="@Url.Content("~/Italia/Home")"><img src="@Url.Content("~/images/it.png")" /></a></li>
+</ul>

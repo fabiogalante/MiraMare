@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MiraMare", "http://localhost:49321", "{C5399686-CABC-4014-8543-64119BE8374D}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49321"
+		Debug.AspNetCompiler.PhysicalPath = "MiraMare\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49321\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49321"
+		Release.AspNetCompiler.PhysicalPath = "MiraMare\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49321\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "MiraMare\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraMareHotel", "MiraMareHotel\MiraMareHotel.csproj", "{B9E367FF-EB09-49CE-A899-57641207B3A5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://galante.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = http://localhost:49321
+		SccProjectName1 = MiraMare
+		SccLocalPath1 = MiraMare
+		SccProjectEnlistmentChoice1 = 2
+		SccProjectUniqueName2 = MiraMareHotel\\MiraMareHotel.csproj
+		SccProjectName2 = MiraMareHotel
+		SccLocalPath2 = MiraMareHotel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5399686-CABC-4014-8543-64119BE8374D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5399686-CABC-4014-8543-64119BE8374D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5399686-CABC-4014-8543-64119BE8374D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5399686-CABC-4014-8543-64119BE8374D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B9E367FF-EB09-49CE-A899-57641207B3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E367FF-EB09-49CE-A899-57641207B3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E367FF-EB09-49CE-A899-57641207B3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E367FF-EB09-49CE-A899-57641207B3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

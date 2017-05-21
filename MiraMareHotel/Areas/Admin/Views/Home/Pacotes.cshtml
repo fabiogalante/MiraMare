@@ -1,0 +1,96 @@
+﻿@model IEnumerable<MiraMareHotel.Models.TarifaPacote>
+
+@{
+    ViewBag.Title = "Pacotes";
+    Layout = "~/Areas/Admin/Views/Shared/_MiraMare.cshtml";
+}
+
+
+
+
+
+
+<div id="dialog-edit" style="display: none"></div>
+
+
+
+<div id="contact">
+    <div class="container">
+        <div class="section_header">
+            <h3>Período </h3>
+        </div>
+
+        <div style="max-height:270px;overflow-y:auto;" id="periodoDeAte">
+            <a data-toggle="modal" href="#" id="edit">
+                <span title="Editar período"><i class="icon-pencil"></i></span>
+            </a>
+            @{ Html.RenderAction("DeAte", "Home"); }
+        </div>
+
+
+    </div>
+</div>
+
+
+<div id="contact">
+    <div class="container">
+        <div class="section_header">
+            <h3>Pacotes </h3>
+        </div>
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Número de dias
+                </th>
+                <th>
+                    Luxo 1 ou 2 hospedes
+                </th>
+                <th>
+                    Luxo 3 hospedes
+                </th>
+                <th>
+                    Luxo 4 hospedes
+                </th>
+                <th>
+                    Luxo com varanda 1 ou 2 hospedes
+                </th>
+                <th>
+                    Luxo com varanda 3 hospedes
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Luxo1Hospede)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Luxo3Hospedes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Luxo4Hospedes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LuxoVaranda1Hospede)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LuxoVaranda3Hospedes)
+                </td>
+                <td>
+                    @Html.ActionLink("Alterar", "PacotesDia", new { id = item.Id }, new { @class = "btn btn-primary"/*, data_dialog_id = "edit-Dialog"*/ })
+
+                </td>
+            </tr>
+            }
+
+        </table>
+
+
+    </div>
+</div>
+

@@ -1,0 +1,93 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Mira-Maré Praia Hotel  - Praia da Enseada - Guarujá - São Paulo - SP -  @ViewBag.Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <meta property="og:title" content="Mira-Maré Praia Hotel" />
+    <meta name="description" content="Praia da Enseada, Guarujá - São Paulo">
+    <meta name="og:description" content="Mira-Maré Praia Hotel dista poche quadre dai migliori ristoranti del Guarujá, da un centro disport nàutici, da un centro commerciale e dalla via di acesso alla spiaggia Pernambuco ed altre spiaggie del Litoral Norte (Costa Verde).">
+
+
+    <!-- Styles -->
+    <link href="@Url.Content("~/css/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/bootstrap-responsive.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/bootstrap-overrides.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/elastislide.css")" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/theme.css")" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/lib/animate.css")" media="screen, projection" />
+
+    <link rel="icon" href="@Url.Content("~/Img/favicon.ico")" type="image/x-icon" />
+
+    <!-- Gallery -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/style.css")" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+
+
+
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="Home">
+                    <strong>Mira-Maré Praia Hotel</strong>
+                </a>
+                <div class="nav-collapse collapse">
+
+                    @Html.Partial("_MenuItaliano")
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    @Html.Partial("_FooterItaliano")
+    <!-- Scripts -->
+    <script src="@Url.Content("~/js/jquery-latest.js")"></script>
+    <script src="@Url.Content("~/js/bootstrap.js")"></script>
+    <script src="@Url.Content("~/js/jquery-ui.js")"></script>
+    <script src="@Url.Content("~/js/jquery.unobtrusive-ajax.js")"></script>
+    <script src="@Url.Content("~/js/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/js/jquery.validate.unobtrusive.js")"></script>
+    <script src="@Url.Content("~/js/flexslider.js")"></script>
+    <script src="@Url.Content("~/js/galeria.js")"></script>
+    <script src="@Url.Content("~/js/galleria-1.3.3.js")"></script>
+    <script src="@Url.Content("~/js/gallery.js")"></script>
+    <script src="@Url.Content("~/js/hotel.js")"></script>
+    <script src="@Url.Content("~/js/index-slider.js")"></script>
+    <script src="@Url.Content("~/js/jquery.easing.1.3.js")"></script>
+    <script src="@Url.Content("~/js/jquery.elastislide.js")"></script>
+    <script src="@Url.Content("~/js/jquery.isotope.js")"></script>
+    <script src="@Url.Content("~/js/jquery.maskedinput.js")"></script>
+    <script src="@Url.Content("~/js/jquery.tmpl.js")"></script>
+    <script src="@Url.Content("~/js/theme.js")"></script>
+    <script src="@Url.Content("~/js/Italiano/italiano.js")"></script>
+    
+
+</body>
+</html>
+
+

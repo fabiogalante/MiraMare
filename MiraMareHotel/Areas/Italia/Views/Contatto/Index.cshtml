@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Contatto";
+    Layout = "~/Areas/Italia/Views/Shared/_MiraMareItaliano.cshtml";
+}
+
+<link href="@Url.Content("~/css/contact.css")" rel="stylesheet" />
+
+<div id="contact">
+    <div class="container">
+        <div class="section_header">
+            <h3><img src="@Url.Content("~/images/it.png")" />Contatto</h3>
+        </div>
+        <div class="row contact">
+            <p>
+                Contatto <a href="mailto: miramare@hotelmiramare.com.br"> miramare@hotelmiramare.com.br </a>  via email o compilare il modulo qui sotto:
+            </p>
+
+
+            <div class="row form">
+                <div class="span6 box">
+
+                    <input type="text" placeholder="Nome" class="name" id="nome">
+                    <input type="text" placeholder="E-mail" class="mail" id="email">
+                    <input type="text" placeholder="Telefono" class="phone" id="telefone">
+                    <div id="mensagemContato"></div>
+                </div>
+                <div class="span6 box box_r">
+                    <textarea placeholder="Inserisci il tuo messaggio..." id="mensagem"></textarea>
+                </div>
+            </div>
+
+            <div class="row submit">
+                <div class="span3 right">
+                    <input type="submit" value="Inviare" id="contatoSubmit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row map">
+        <div class="container">
+            <div class="span5 box_wrapp">
+                <div class="box_cont">
+                    <div class="head">
+                        <h6>Indirizzo</h6>
+                    </div>
+                    <ul class="street">
+                        <li>Avenida Miguel Estefano nº 4479 </li>
+                        <li>Via costiera alla spiaggia Enseada </li>
+                        <li>Codico Postale: 11440-534 </li>
+                        <li class="icon icontop">
+                            <span class="contacticos ico1"></span>
+                            <span class="text">3351-5051 </span>
+                        </li>
+
+                        <li class="icon">
+                            <span class="contacticos ico2"></span>
+                            <a href="mailto:miramare@hotelmiramare.com.br" class="text">miramare@hotelmiramare.com.br</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <iframe height="600" frameborder="0" width="100%" scrolling="no" src="https://maps.google.com.br/?ie=UTF8&amp;ll=-23.9859889,-46.2075513&amp;spn=0.045157,0.15398&amp;t=m&amp;z=18&q=Mira-maré+Praia+Hotel,+Brasil&amp;output=embed&amp;iwloc=near" marginwidth="0" marginheight="0"></iframe>
+
+
+    </div>
+</div>
+
+

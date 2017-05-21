@@ -1,0 +1,36 @@
+﻿@model MiraMareHotel.Models.TarifaPacote
+
+@{
+
+    Layout = null;
+}
+
+@using (Html.BeginForm("PacotesDia", "Home","POST"))
+{
+    @Html.HiddenFor(model => model.Id)
+    <div style="position:relative;">
+        <table>
+            <tr><td><b>Dias:</b></td><td>@Html.EditorFor(model => model.Dias)</td></tr>
+            <tr><td><b>Luxo 1 ou 2 hospedes:</b></td><td>@Html.EditorFor(model => model.Luxo1Hospede)</td></tr>
+            <tr><td><b>Luxo 3 hospedes:</b></td><td>@Html.EditorFor(model => model.Luxo3Hospedes)</td></tr>
+            <tr><td><b>Luxo 4 hospedes:</b></td><td>@Html.EditorFor(model => model.Luxo4Hospedes)</td></tr>
+            <tr><td><b>Luxo com varanda 1 ou 2 hospedes:</b></td><td>@Html.EditorFor(model => model.LuxoVaranda1Hospede)</td></tr>
+            <tr><td><b>Luxo com varanda 3 hospedes:</b></td><td>@Html.EditorFor(model => model.LuxoVaranda3Hospedes)</td></tr>
+            <tr><td></td><td><input type="submit" value="Salvar" class="salvar" /></td></tr>
+        </table>
+
+    </div>
+
+
+
+}
+
+
+<script type="text/javascript">
+    $(function () {
+        $('input[type=text]').maskMoney({ prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false });
+    });
+</script>
+
+
+
